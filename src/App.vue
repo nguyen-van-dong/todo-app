@@ -1,15 +1,17 @@
 <template>
   <Header/>
+  <Todo/>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-// import Todo from './components/Todo.vue';
+import Todo from './components/Todo.vue';
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Todo
   }
 }
 </script>
