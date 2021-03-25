@@ -33,7 +33,12 @@ export default {
     },
     deleteTodoItem(itemTodo) {
        this.todos = this.todos.filter( (item) => item.id !== itemTodo.id);
-       return this.todos;
+      try {
+        axios.delete(`https://jsonplaceholder.typicode.com/todos/${itemTodo.id}`);
+      } catch (error) {
+        console.log(error);
+      }
+      return this.todos;
     },
     addItemTodo(data) {
       let allItems = this.todos;
